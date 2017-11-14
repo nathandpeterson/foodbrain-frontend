@@ -1,4 +1,4 @@
 
 document.addEventListener('DOMContentLoaded',() => {
-  console.log('render homepage')
+  console.log('okay loaded')
 })
