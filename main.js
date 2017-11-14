@@ -1,4 +1,4 @@
 
-document.addEventListener('DOMContentLoaded',() => {
-  console.log('okay loaded')
+document.addEventListener('DOMContentLoaded', () => {
+  mainButtons.build()
 })

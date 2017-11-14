@@ -3,24 +3,29 @@
   <head>
     <meta charset="utf-8">
     <title>FoodBrain - An App to Help You Manage Your Eating Life</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="style/style.css" rel="stylesheet" type="text/css">
-    <script defer src="main.js"></script>
     <script src="requests/requests.js"></script>
     <script src="requests/images.js"></script>
+    <script src="templates/main-buttons.js"></script>
+    <script src="templates/foodcards.js"></script>
+    <script defer src="render/main.js"></script>
+    <script defer src="render/buttons.js"></script>
+    <script defer src="render/foods.js"></script>
+    <script defer src="main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.1/axios.min.js"></script>
   </head>
   <body>
-  <div class='jumbotron'>
-    <h1 class="display-4">foodbrain</h1>
-    <p class="lead">an app to help you manage your eating life</p>
-  </div>
   <div class="container-fluid">
+    <div class='jumbotron'>
+      <h1 class="display-4">foodbrain</h1>
+      <p class="lead">an app to help you manage your eating life</p>
+    </div>
     <div class="dialogue">
     </div>
-    <div class="container">
-      <div class="card-deck">
-      </div>
+    <div class="container button-container">
+    </div>
+    <div class="card-deck food-cards">
     </div>
   </div>
   </body>

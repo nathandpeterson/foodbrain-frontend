@@ -3,11 +3,11 @@ const local = 'http://localhost:3000'
 const req = {
   getAllFoods(){
     axios.get(`${local}/foods`)
-    .then(res => console.log(res))
+      .then(result => showFoods.all(result.data))
   },
   getOneFood(id){
     axios.get(`${local}/foods/${id}`)
-    .then(res => res)
+    .then(res => showFoods.one(res.data))
   },
   addFood(data){
     axios.post(`${local}/foods`)

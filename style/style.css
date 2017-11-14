@@ -1,15 +1,66 @@
-body {
-  margin: 0 auto;
-}
 
 .jumbotron {
   margin: 0;
   padding: 2rem;
+  background-color: rgba(190,190,190, 0.9);
 }
 
 .container-fluid {
-  height: 50rem;
-  background-image: url(https://source.unsplash.com/collection/251966/1600x700);
-  display: cover;
-  background-repeat: no-repeat;
+  height: 55rem;
+  background-image: url(https://source.unsplash.com/collection/251966/1600x900);
+  background-repeat: repeat-y;
+}
+
+.food-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.food-cards .each {
+  padding: 2rem;
+}
+
+.card {
+  background-color: rgba(190,190,190, 0.8);
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  width: 10rem;
+}
+
+.card img {
+  width: 100%;
+}
+
+.update {
+  padding: 2rem;
+}
+
+.button-container {
+  display: flex;
+}
+
+.main-buttons {
+  padding: 2rem;
+  height: 10rem;
+  width: 10rem;
+  margin: 6rem;
+  border-radius: 3px;
+  color: white;
+  background: rgba(190,190,190, 0.8);
+  border: rgba(210,210,210, 0.9);
+  -webkit-box-shadow: 3px 11px 23px -6px rgba(0,0,0,0.23);
+  -moz-box-shadow: 3px 11px 23px -6px rgba(0,0,0,0.23);
+  box-shadow: 3px 11px 23px -6px rgba(0,0,0,0.23);
+}
+
+.main-buttons:hover {
+  background: rgba(210,210,210, 0.9);
+  -webkit-box-shadow: 3px 11px 23px -6px rgba(0,0,0,0.0);
+  -moz-box-shadow: 3px 11px 23px -6px rgba(0,0,0,0.0);
+  box-shadow: 3px 11px 23px -6px rgba(0,0,0,0);
+  color: rgb(64,64,64);
+}
+
+.card-perish {
+  color: orange;
 }
