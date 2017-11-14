@@ -10,15 +10,17 @@ const req = {
     .then(res => showFoods.one(res.data))
   },
   addFood(data){
-    axios.post(`${local}/foods`)
+    axios.post(`${local}/foods`, data)
     .then(res => res)
   },
   dropFood(id){
     axios.delete(`${local}/foods/${id}`)
-    .then(res => res)
+    // SUCCESS MESSAGE
+    .then(res => console.log(res))
   },
   updateFood(id, data){
     axios.put(`${local}/foods/${id}}`, data)
+    // SUCCESS MESSAGE
     .then(res => res)
   },
   getAllRecipes(){

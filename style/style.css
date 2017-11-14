@@ -5,10 +5,10 @@
   background-color: rgba(190,190,190, 0.9);
 }
 
-.container-fluid {
-  height: 55rem;
+.main-container {
+  height: 50rem;
   background-image: url(https://source.unsplash.com/collection/251966/1600x900);
-  background-repeat: repeat-y;
+  background-repeat: no-repeat;
 }
 
 .food-cards {
@@ -22,8 +22,7 @@
 
 .card {
   background-color: rgba(190,190,190, 0.8);
-  margin-bottom: 1.5rem;
-  margin-top: 1.5rem;
+  margin: 1.5rem;
   width: 10rem;
 }
 
@@ -63,4 +62,13 @@
 
 .card-perish {
   color: orange;
+}
+
+form {
+  color: black;
+  background: rgba(210,210,210, 0.5);
+  text-align: center;
+  border-radius: 3px;
+  margin: 5rem;
+  padding: 0 .5rem;
 }
