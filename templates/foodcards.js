@@ -7,7 +7,6 @@ function showFood(data){
       <img class="card-img-top" src="${imageURL}/${image}/350x200" alt="Card image cap">
       <div class="card-body">
         <h4 class="card-title">${data.name}</h4>
-        <p class="card-text">${data.quantity} ${data.unit}</p>
         <a id="${data.id}" href="#" class="btn btn-light food-data">More</a>
       </div>
     </div>`
@@ -22,7 +21,6 @@ function showOneFood(data){
       <img class="card-img-top" src="${imageURL}/${image}/350x200" alt="Card image cap">
       <div class="card-body">
         <h4 class="card-name">${data.name}</h4>
-        <p class="card-quantity">${data.quantity} ${data.unit}</p>
         <p class="card-perish">${perish}</p>
       </div>
     </div>`

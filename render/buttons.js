@@ -26,6 +26,19 @@ let activateButtons = {
       showFoods.clear()
       req.getAllFoods()
     })
+    let update = document.querySelector('.food-update-btn')
+    update.addEventListener('click', (e) => {
+        e.preventDefault()
+        let data
+        // console.log('update', e.target.id)
+        showFoods.clear()
+        //this doesn't work
+        // req.getOneFood(e.target.id)
+          .then(res => {
+            console.log(res.data)
+            // document.querySelector('.create-button').innerHTML = form()
+          })
+    })
   },
   create(){
   document.querySelector('.food-create-btn').addEventListener('click', (e) => {
@@ -48,7 +61,6 @@ let activateButtons = {
       e.preventDefault()
       let data = collectFormData()
       req.addFood(data)
-      req.getAllFoods()
     })
   }
 }
@@ -56,7 +68,8 @@ let activateButtons = {
 let collectFormData = function(){
   let data = {}
   data.name = document.querySelector('#food-name').value
-  data.category = document.querySelector('#food-category')
+  data.category = document.querySelector('#food-category').value
+  data.category = Number(foodCategories(data.category))
   return data
 }
 
@@ -64,4 +77,35 @@ let buildCreateFoodButton = function() {
   document.querySelector('.create-button').innerHTML +=
   `<button class="btn btn-lg btn-primary btn-block food-create-btn">Add More Food</button>`
   activateButtons.create()
+}
+
+let foodCategories = function(category){
+  let number = 0
+  switch(category){
+    case "fruit":
+      number = 1
+      break;
+    case "vegetable":
+      number = 2
+      break;
+    case "protein":
+      number = 3
+      break;
+    case "dairy":
+      number = 4
+      break;
+    case "legume":
+      number = 5
+      break;
+    case "bread and grain":
+      number = 6
+      break;
+    case "baking and spice":
+      number = 7
+      break;
+    default:
+      number = 99
+      break;
+  }
+  return number
 }

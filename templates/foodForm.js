@@ -1,8 +1,8 @@
-function form(id='') {
-  return `
-    <form>
+function form(data='') {
+  let form = ` <form>
       <label for="food-name">food name</label>
       <input required type="text" id="food-name" class="form-control">
+      ${data.name}
       </input>
       <label for="food-category">category</label>
       <select id="food-category" class="form-control">
@@ -13,7 +13,7 @@ function form(id='') {
         <option>legume</option>
         <option>bread and grain</option>
         <option>baking and spices</option>
-        <option>other</option>
+        <option >other</option>
       </select>
       <br>
       <div class="container">
@@ -24,4 +24,5 @@ function form(id='') {
       </div>
     </form>
     `
+    return form
 }

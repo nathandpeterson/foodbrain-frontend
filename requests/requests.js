@@ -3,7 +3,7 @@ const local = 'http://localhost:3000'
 const req = {
   getAllFoods(){
     axios.get(`${local}/foods`)
-      .then(result => showFoods.all(result.data))
+      .then(res => showFoods.all(res.data))
   },
   getOneFood(id){
     axios.get(`${local}/foods/${id}`)
@@ -11,21 +11,22 @@ const req = {
   },
   addFood(data){
     axios.post(`${local}/foods`, data)
-    .then(res => res)
+    .then(res => this.getAllFoods())
   },
   dropFood(id){
     axios.delete(`${local}/foods/${id}`)
     // SUCCESS MESSAGE
-    .then(res => console.log(res))
+    .then(res => this.getAllFoods())
   },
   updateFood(id, data){
     axios.put(`${local}/foods/${id}}`, data)
     // SUCCESS MESSAGE
-    .then(res => res)
+    // UPDATE ROUTE DOES NOT WORK!!!
+    .then(res => this.getAllFoods())
   },
   getAllRecipes(){
     axios.get(`${local}/recipes`)
-    .then(res => res)
+    .then(res => showRecipes.all(res.data))
   },
   getOneRecipe(id){
     axios.get(`${local}/recipes/${id}`)
