@@ -23,3 +23,42 @@ const showFoods = {
     document.querySelector('.create-button').innerHTML = ''
   }
 }
+
+let collectFoodFormData = function(){
+  let data = {}
+  data.name = document.querySelector('#food-name').value
+  data.category = document.querySelector('#food-category').value
+  data.category = Number(foodCategories(data.category))
+  return data
+}
+
+let foodCategories = function(category){
+  let number = 0
+  switch(category){
+    case "fruit":
+      number = 1
+      break;
+    case "vegetable":
+      number = 2
+      break;
+    case "protein":
+      number = 3
+      break;
+    case "dairy":
+      number = 4
+      break;
+    case "legume":
+      number = 5
+      break;
+    case "bread and grain":
+      number = 6
+      break;
+    case "baking and spice":
+      number = 7
+      break;
+    default:
+      number = 99
+      break;
+  }
+  return number
+}

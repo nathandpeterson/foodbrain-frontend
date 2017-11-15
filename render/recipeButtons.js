@@ -1,0 +1,5 @@
+const activateRecipeButtons = {
+  one(id){
+    
+  }
+}

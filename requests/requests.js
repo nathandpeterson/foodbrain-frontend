@@ -24,13 +24,26 @@ const req = {
     // UPDATE ROUTE DOES NOT WORK!!!
     .then(res => this.getAllFoods())
   },
+  searchFood(ingredient){
+    axios.put(`${local}/recipes`, ingredient)
+    .then(matches => {
+      console.log(matches)
+      matches.data.forEach(match => {
+        showRecipes.highlightIngredients(match.id)
+      })
+    })
+  },
   getAllRecipes(){
     axios.get(`${local}/recipes`)
-    .then(res => showRecipes.all(res.data))
+    .then(res => {
+      showRecipes.all(res.data)
+    })
   },
   getOneRecipe(id){
     axios.get(`${local}/recipes/${id}`)
-    .then(res => res)
+    .then(res => {
+      showRecipes.one(res.data)
+    })
   },
   addRecipe(data){
     axios.post(`${local}/recipes`, data)

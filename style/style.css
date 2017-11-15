@@ -5,6 +5,10 @@
   background-color: rgba(190,190,190, 0.9);
 }
 
+.toolbar {
+  margin-top: 1rem;
+}
+
 .main-container {
   background-image: url(https://source.unsplash.com/collection/251966/1500x1600);
   display: cover;
@@ -19,7 +23,12 @@
 .food-cards .each {
   padding: 2rem;
   min-width: 15rem;
-  max-width: 20rem;
+}
+
+.recipe-card {
+  padding: 2rem;
+  min-width: 15rem;
+  max-width: 40rem;
 }
 
 .card {

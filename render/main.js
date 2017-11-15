@@ -1,5 +1,6 @@
 const mainButtons = {
   build(){
+    showFoods.clear()
     document.querySelector('.button-container').innerHTML = buildMainButtons()
     this.activate()
   },
