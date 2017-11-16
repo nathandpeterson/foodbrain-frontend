@@ -39,6 +39,11 @@ let activateButtons = {
             // document.querySelector('.create-button').innerHTML = form()
           })
     })
+    let ideas = document.querySelector('.recipe-ideas-btn')
+    ideas.addEventListener('click', (e) => {
+      e.preventDefault()
+      console.log(e.target)
+    })
   },
   create(){
   document.querySelector('.food-create-btn').addEventListener('click', (e) => {
@@ -102,6 +107,11 @@ let activateButtons = {
     e.preventDefault()
     showFoods.clear()
     req.getAllRecipes()
+    })
+    let destroy = document.querySelector('.food-delete-btn')
+    destroy.addEventListener('click', (e) => {
+      e.preventDefault()
+      req.dropRecipe(e.target.id)
     })
   }
 }

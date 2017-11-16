@@ -15,7 +15,7 @@ const mainButtons = {
     })
     document.querySelector('.ideas').addEventListener('click', (e) => {
       e.preventDefault()
-      //recipe ideas....
+      // req.forkReq()
     })
   }
 }

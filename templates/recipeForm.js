@@ -1,5 +1,7 @@
 function buildRecipeForm(){
-  let form = `<form>
+  let form = `<div class="row">
+      <div class="col-6">
+      <form>
       <label for="recipe-name">recipe name</label>
       <input required type="text" id="recipe-name" class="form-control">
       <label for="recipe-prep">prep time</label>
@@ -25,11 +27,22 @@ function buildRecipeForm(){
       <button id="submit-new-recipe" class="btn btn-block btn-primary">submit</button>
       <button id="recipes-home" class="btn btn-block btn-light">go back</button>
     </form>
-    <br>`
+    </div>
+    <br>
+    <div class="col-6" id="ingredient-form"></div>
+    `
     return form
 }
 
 function buildIngredientForm(){
-  let form = `<form></form>`
-  return form
+  document.querySelector('#ingredient-form').innerHTML = `<form>
+  <label for="ingredient-name">ingredient name</label><input required type="text" id="ingredient-name" class="form-control">
+  <label for="quantity-name">quantity</label>
+  <input required placeholder="1/2 cup" type="text" id="quantity-name" class="form-control">
+  <br>
+  <button id="submit-new-ingredient" class="btn btn-block btn-primary">add ingredient</button>
+  <br>
+  <ul class="list-group ingredient-container">
+  </ul>
+  </form> </div>`
 }

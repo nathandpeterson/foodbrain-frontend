@@ -49,15 +49,22 @@ const req = {
     .then(res => {
     // success message here, use res.statusText
       console.log(res.data[0].id)
-      // addIngredients(res.data[0].id)
-      req.getAllRecipes()
+      newRecipe.displayNew(res.data[0].id)
+      getIngredientForm(res.data[0].id)
     })
   },
   dropRecipe(id){
     axios.delete(`${local}/recipes/${id}`)
+      .then(res => {
+        req.getAllRecipes()
+      })
   },
   updateRecipe(id, data){
     axios.put(`${local}/recipes/${id}}`, data)
     .then(res => res)
+  },
+  forkReq(data){
+    axios.get(`${local}/ideas/${data}`)
+      .then(res => console.log(res))
   }
 }
