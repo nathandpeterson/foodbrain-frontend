@@ -27,7 +27,6 @@ const req = {
   searchFood(ingredient){
     axios.put(`${local}/recipes`, ingredient)
     .then(matches => {
-      console.log(matches)
       matches.data.forEach(match => {
         showRecipes.highlightIngredients(match.id)
       })
@@ -47,7 +46,12 @@ const req = {
   },
   addRecipe(data){
     axios.post(`${local}/recipes`, data)
-    .then(res => res)
+    .then(res => {
+    // success message here, use res.statusText
+      console.log(res.data[0].id)
+      // addIngredients(res.data[0].id)
+      req.getAllRecipes()
+    })
   },
   dropRecipe(id){
     axios.delete(`${local}/recipes/${id}`)

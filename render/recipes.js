@@ -15,7 +15,7 @@ const showRecipes = {
     let card = showOneRecipe(recipe)
     cardContainer.innerHTML = card
     cardContainer.innerHTML += cardButtons(recipe[0].id)
-    // activateButtons.recipeUpdateActions()
+    activateButtons.recipeUpdateActions()
   },
   clear(){
     document.querySelector('.food-cards').innerHTML = ''

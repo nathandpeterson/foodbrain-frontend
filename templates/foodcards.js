@@ -63,7 +63,7 @@ function cardButtons(id){
       <div class="card-body">
         <button id="${id}" href="#" class="btn btn-lg btn-secondary btn-block food-update-btn">Update</button>
         <button id="${id}" href="#" class="btn btn-lg btn-secondary btn-block food-delete-btn">Delete</button>
-        <button id="${id}" href="#" class="btn btn-lg btn-secondary btn-block food-update-btn">Recipe Ideas</button>
+        <button id="${id}" href="#" class="btn btn-lg btn-secondary btn-block food-ideas-btn">Recipe Ideas</button>
         <button id="${id}" href="#" class="btn btn-lg btn-secondary btn-block food-back-btn">Back to All Foods</button>
       </div>
     </div>`

@@ -4,14 +4,14 @@ function buildRecipeForm(){
       <input required type="text" id="recipe-name" class="form-control">
       <label for="recipe-prep">prep time</label>
       <input required type="text" id="recipe-prep" class="form-control">
-      <label for="recipe-prep">prep time</label>
-      <input required type="text" id="recipe-prep" class="form-control">
       <label for="recipe-instructions">instructions</label>
-      <input required type="text" id="recipe-instructions" class="form-control">
+      <textarea required type="text" id="recipe-instructions" class="form-control" rows="5"></textarea>
       <label for="recipe-yield">yield</label>
       <input type="text" id="recipe-yield" class="form-control">
       <br>
-      <select id="recipe-category" class="form-control">
+      <label for="recipe-category">recipe category</label>
+      <select required id="recipe-category" class="form-control">
+        <option></option>
         <option>breakfast</option>
         <option>lunch</option>
         <option>snack</option>
@@ -20,11 +20,16 @@ function buildRecipeForm(){
         <option >other</option>
       </select>
       <label for="recipe-notes">notes <em>optional</em></label>
-      <input type="text" id="recipe-yield" class="form-control">
+      <input type="text" id="recipe-notes" class="form-control">
       <br>
-      <button class="btn btn-block btn-primary">submit</button>
+      <button id="submit-new-recipe" class="btn btn-block btn-primary">submit</button>
       <button id="recipes-home" class="btn btn-block btn-light">go back</button>
     </form>
     <br>`
     return form
+}
+
+function buildIngredientForm(){
+  let form = `<form></form>`
+  return form
 }

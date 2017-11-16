@@ -88,7 +88,21 @@ let activateButtons = {
         e.preventDefault()
         mainButtons.build()
         })
+      let submitButton = document.querySelector('#submit-new-recipe')
+      submitButton.addEventListener('click',(e)=> {
+          e.preventDefault()
+          let recipe = collectRecipeData()
+          req.addRecipe(recipe)
+      } )
       })
+  },
+  recipeUpdateActions(){
+    let back = document.querySelector('.food-back-btn')
+    back.addEventListener('click', (e) => {
+    e.preventDefault()
+    showFoods.clear()
+    req.getAllRecipes()
+    })
   }
 }
 
