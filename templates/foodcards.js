@@ -4,9 +4,10 @@ function showFood(data){
   let image = foodImage(data)
   return `
     <div class="card each">
+      <h4 class="card-title">${data.name}</h4>
       <img class="card-img-top" src="${imageURL}/${image}/350x200" alt="Card image cap">
       <div class="card-body">
-        <h4 class="card-title">${data.name}</h4>
+
         <a id="${data.id}" href="#" class="btn btn-light food-data">More</a>
       </div>
     </div>`
@@ -18,10 +19,11 @@ function showOneFood(data){
   data.perishable ? perish = 'Perishable' : null
   return `
     <div class="card each">
+      <h4 class="card-name">${data.name}</h4>
       <img class="card-img-top" src="${imageURL}/${image}/350x200" alt="Card image cap">
       <div class="card-body">
-        <h4 class="card-name">${data.name}</h4>
-        <p class="card-perish">${perish}</p>
+      <br>
+      <p class="card-perish">${perish}</p>
       </div>
     </div>`
 }

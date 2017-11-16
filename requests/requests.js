@@ -48,8 +48,8 @@ const req = {
     axios.post(`${local}/recipes`, data)
     .then(res => {
     // success message here, use res.statusText
-      console.log(res.data[0].id)
-      newRecipe.displayNew(res.data[0].id)
+      console.log(res.data[0])
+      newRecipe.displayNew(res.data[0])
       getIngredientForm(res.data[0].id)
     })
   },

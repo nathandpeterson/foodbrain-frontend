@@ -34,9 +34,16 @@
   flex-wrap: wrap;
 }
 
+.each .card-name {
+  font-size: 2rem;
+  background: rgba(128,128,128, 0.8);
+  margin-bottom: 1rem;
+}
+
 .food-cards .each {
   padding: 2rem;
   min-width: 15rem;
+  max-width: 25rem;
 }
 
 .recipe-card {
@@ -49,6 +56,7 @@
   background-color: rgba(190,190,190, 0.8);
   margin: 1.5rem;
   width: 10rem;
+  text-align: center;
 }
 
 .card img {
@@ -87,7 +95,11 @@
 }
 
 .card-perish {
-  color: orange;
+  color: rgb(244, 229, 66);
+  font-size: 2rem;
+  background: rgba(110,110,110, 0.9);
+  text-align: center;
+  border-radius: 3px;
 }
 
 form {
