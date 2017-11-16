@@ -6,14 +6,15 @@ const showRecipes = {
       let card = showRecipe(recipe)
       cardContainer.innerHTML += card
     })
+    this.buildAddRecipeBtn()
     activateButtons.recipes()
   },
-  one(data){
+  one(recipe){
     this.clear()
     let cardContainer = document.querySelector('.food-cards')
-    let card = showOneRecipe(data)
+    let card = showOneRecipe(recipe)
     cardContainer.innerHTML = card
-    cardContainer.innerHTML += cardButtons(data.id)
+    cardContainer.innerHTML += cardButtons(recipe[0].id)
     // activateButtons.recipeUpdateActions()
   },
   clear(){
@@ -24,5 +25,14 @@ const showRecipes = {
   highlightIngredients(id){
     let ing = document.querySelector(`#ingredient${id}`)
     ing.style.color = 'yellow'
+  },
+  buildAddRecipeBtn() {
+    document.querySelector('.create-button').innerHTML +=
+    `<button class="btn btn-lg btn-primary btn-block recipe-create-btn">Add Recipe</button>
+    <button class="btn btn-lg btn-light btn-block home-btn">Go Back to Main Page</button>
+    <br>
+    `
+    activateButtons.createRecipe()
+    activateButtons.home()
   }
 }

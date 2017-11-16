@@ -24,7 +24,6 @@ function showOneRecipe([recipeData, allIngredientNames, allIngredients]){
         <ul> Ingredients`
   allIngredients.forEach(ingredient => {
     card += `<li id="ingredient${ingredient.ingredient_id}">${ingredient.quantity} ${ingredient.name}</li>`
-    // req.searchFood(ingredient)
     })
     card += `</ul></div></div>`
     req.searchFood()

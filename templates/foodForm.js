@@ -2,7 +2,6 @@ function form(data='') {
   let form = ` <form>
       <label for="food-name">food name</label>
       <input required type="text" id="food-name" class="form-control">
-      ${data.name}
       </input>
       <label for="food-category">category</label>
       <select id="food-category" class="form-control">
@@ -16,6 +15,11 @@ function form(data='') {
         <option >other</option>
       </select>
       <br>
+      <label for="food-perish">perishable?</label>
+      <select id="food-perish" class="form-control">
+        <option>yes</option>
+        <option>no</option>
+      </select>
       <div class="container">
         <div class="update-row">
           <button id="go-back" type="button" class="btn btn-lg btn-warning">Go Back</button>
@@ -23,6 +27,6 @@ function form(data='') {
         </div>
       </div>
     </form>
-    `
+    <br>`
     return form
 }

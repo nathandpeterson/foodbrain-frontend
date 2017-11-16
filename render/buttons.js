@@ -77,6 +77,18 @@ let activateButtons = {
         req.getOneRecipe(e.target.id)
       })
     }
+  },
+  createRecipe(){
+    document.querySelector('.recipe-create-btn').addEventListener('click',(e) => {
+      e.preventDefault()
+      showFoods.clear()
+      document.querySelector('.create-button').innerHTML = buildRecipeForm()
+      scroll(0,0)
+      document.querySelector('#recipes-home').addEventListener('click',(e) =>{
+        e.preventDefault()
+        mainButtons.build()
+        })
+      })
   }
 }
 
@@ -84,6 +96,7 @@ let buildCreateFoodButton = function() {
   document.querySelector('.create-button').innerHTML +=
   `<button class="btn btn-lg btn-primary btn-block food-create-btn">Add More Food</button>
   <button class="btn btn-lg btn-light btn-block home-btn">Go Back to Main Page</button>
+  <br>
   `
   activateButtons.create()
   activateButtons.home()
