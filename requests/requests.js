@@ -48,9 +48,7 @@ const req = {
     axios.post(`${local}/recipes`, data)
     .then(res => {
     // success message here, use res.statusText
-      console.log(res.data[0])
       newRecipe.displayNew(res.data[0])
-      getIngredientForm(res.data[0].id)
     })
   },
   dropRecipe(id){
@@ -62,6 +60,10 @@ const req = {
   updateRecipe(id, data){
     axios.put(`${local}/recipes/${id}}`, data)
     .then(res => res)
+  },
+  addIngredient(data){
+    axios.post(`${local}/ingredients`, data)
+      .then(res => res)
   },
   forkReq(data){
     axios.get(`${local}/ideas/${data}`)

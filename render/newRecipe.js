@@ -21,5 +21,13 @@ const newRecipe = {
         <div class="col-6" id="ingredient-form"></div>
           `
     buildIngredientForm()
+    this.activateIngredientForm()
+  },
+  activateIngredientForm(){
+    let submit = document.querySelector('#submit-new-ingredient')
+    submit.addEventListener('click', (e) => {
+      e.preventDefault()
+      console.log('clicked!')
+    })
   }
 }
