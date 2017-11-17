@@ -47,9 +47,10 @@
 }
 
 .recipe-card {
-  padding: 2rem;
-  min-width: 15rem;
+  padding: 3rem;
+  min-width: 25rem;
   max-width: 40rem;
+  list-style: none;
 }
 
 .card {
@@ -61,6 +62,10 @@
 
 .card img {
   width: 100%;
+}
+
+.ingredient-list {
+  list-style: none;
 }
 
 .update {

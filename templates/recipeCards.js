@@ -21,7 +21,7 @@ function showOneRecipe([recipeData, allIngredientNames, allIngredients]){
         <h4 class="card-name">${recipeData.name}</h4>
         <h4 class="card-prep">${recipeData.prep_time}</h4>
         <p class="instructions">${recipeData.instructions}<p>
-        <ul> Ingredients`
+        <ul class="ingredient-list"> Ingredients`
   allIngredients.forEach(ingredient => {
     card += `<li id="ingredient${ingredient.ingredient_id}">${ingredient.quantity} ${ingredient.name}</li>`
     })

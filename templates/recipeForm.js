@@ -36,12 +36,13 @@ function buildRecipeForm(){
 
 function buildIngredientForm(){
   document.querySelector('#ingredient-form').innerHTML = `<form>
-  <label for="ingredient-name">ingredient name</label><input required type="text" id="ingredient-name" class="form-control">
+  <label for="ingredient-name">ingredient name</label><input type="text" id="ingredient-name" class="form-control">
   <label for="quantity-name">quantity</label>
-  <input required placeholder="1/2 cup" type="text" id="quantity-name" class="form-control">
+  <input type="text" id="quantity-name" class="form-control">
   <br>
   <button id="submit-new-ingredient" class="btn btn-block btn-primary">add ingredient</button>
   <br>
+  <button id="ingredients-done" class="btn btn-block btn-light">all done</button>
   <ul class="list-group ingredient-container">
   </ul>
   </form> </div>`

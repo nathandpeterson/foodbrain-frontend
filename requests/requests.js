@@ -63,7 +63,10 @@ const req = {
   },
   addIngredient(data){
     axios.post(`${local}/ingredients`, data)
-      .then(res => res)
+      .then(res => {
+        console.log(res.data[0].recipe_id)
+        //use recipe id to refresh the recipe on the left
+      })
   },
   forkReq(data){
     axios.get(`${local}/ideas/${data}`)
