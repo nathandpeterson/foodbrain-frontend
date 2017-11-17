@@ -26,19 +26,19 @@ let activateButtons = {
       showFoods.clear()
       req.getAllFoods()
     })
-    let update = document.querySelector('.food-update-btn')
-    update.addEventListener('click', (e) => {
-        e.preventDefault()
-        let data
-        // console.log('update', e.target.id)
-        showFoods.clear()
-        //this doesn't work
-        // req.getOneFood(e.target.id)
-          .then(res => {
-            console.log(res.data)
-            // document.querySelector('.create-button').innerHTML = form()
-          })
-    })
+    // let update = document.querySelector('.food-update-btn')
+    // update.addEventListener('click', (e) => {
+    //     e.preventDefault()
+    //     let data
+    //     // console.log('update', e.target.id)
+    //     showFoods.clear()
+    //     //this doesn't work
+    //     // req.getOneFood(e.target.id)
+    //       .then(res => {
+    //         console.log(res.data)
+    //         // document.querySelector('.create-button').innerHTML = form()
+    //       })
+    // })
     let ideas = document.querySelector('.recipe-ideas-btn')
     ideas.addEventListener('click', (e) => {
       e.preventDefault()

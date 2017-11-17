@@ -24,6 +24,7 @@ function showOneRecipe([recipeData, allIngredientNames, allIngredients]){
         <ul class="ingredient-list"> Ingredients`
   allIngredients.forEach(ingredient => {
     card += `<li id="ingredient${ingredient.ingredient_id}">${ingredient.quantity} ${ingredient.name}</li>`
+    req.searchFood(ingredient.ingredient_id)
     })
     card += `</ul>`
     if(recipeData.notes) card += `<p class="notes">${recipe.notes}</p>`

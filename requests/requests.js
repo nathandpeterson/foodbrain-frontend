@@ -1,9 +1,14 @@
 const local = 'http://localhost:3000'
 
 const req = {
-  getAllFoods(){
-    axios.get(`${local}/foods`)
-      .then(res => showFoods.all(res.data))
+  getAllFoods(show=true){
+    if(show == true){
+      axios.get(`${local}/foods`)
+        .then(res => showFoods.all(res.data))
+    } else {
+      axios.get(`${local}/foods`)
+        .then(res => ideas.randomFood(res.data))
+    }
   },
   getOneFood(id){
     axios.get(`${local}/foods/${id}`)
@@ -63,13 +68,12 @@ const req = {
   },
   addIngredient(data){
     axios.post(`${local}/ingredients`, data)
-      .then(res => {
-        console.log(res.data[0].recipe_id)
-        //use recipe id to refresh the recipe on the left
-      })
+      .then(res => res)
   },
   forkReq(data){
     axios.get(`${local}/ideas/${data}`)
-      .then(res => console.log(res))
+      .then(res => {
+        ideas.showRecipes(res.data)
+    })
   }
 }
