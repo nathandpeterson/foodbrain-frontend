@@ -7,5 +7,9 @@ function collectRecipeData(){
   recipe.yield = document.querySelector('#recipe-yield').value
   recipe.recipe_category = document.querySelector('#recipe-category').value
   recipe.notes = document.querySelector('#recipe-notes').value
-  return recipe
+  if(recipe.name && recipe.instructions){
+    return recipe
+  } else {
+    emptyRecipeFields()
+  }
 }

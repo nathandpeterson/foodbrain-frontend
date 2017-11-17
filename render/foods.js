@@ -31,7 +31,11 @@ let collectFoodFormData = function(){
   data.category = Number(foodCategories(data.category))
   let perishable = document.querySelector('#food-perish').value
   perishable == 'yes' ? data.perishable = true : data.perishable = false
-  return data
+  if(data.name && data.category){
+    return data
+  } else {
+    emptyFoodFields()
+  }
 }
 
 let foodCategories = function(category){

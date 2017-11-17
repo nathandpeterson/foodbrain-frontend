@@ -115,3 +115,17 @@ form {
   margin: 5rem;
   padding: 1rem .5rem;
 }
+
+.dialogue {
+  color: white;
+  background-color: rgba(190,190,190, 0.8);
+}
+
+.dialogue-empty {
+  color: black;
+  background-color: rgba(190,190,190, 0.8);
+}
+
+.dialogue-container {
+  text-align: center;
+}
