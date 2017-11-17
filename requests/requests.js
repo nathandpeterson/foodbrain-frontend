@@ -1,4 +1,4 @@
-const local = 'http://localhost:3000'
+const loca = 'http://loca host:3000'
 const heroku = 'https://vast-depths-23958.herokuapp.com'
 
 const req = {
