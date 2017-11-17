@@ -8,24 +8,19 @@ const showFoods = {
     })
     activateButtons.foods()
     buildCreateFoodButton()
-    this.sortByButtons()
   },
   one(data){
     this.clear()
     let cardContainer = document.querySelector('.food-cards')
     let card = showOneFood(data)
     cardContainer.innerHTML = card
-    cardContainer.innerHTML += cardButtons(data.id)
+    cardContainer.innerHTML += cardButtons(data)
     activateButtons.foodUpdateActions()
   },
   clear(){
     document.querySelector('.food-cards').innerHTML = ''
     document.querySelector('.button-container').innerHTML = ''
     document.querySelector('.create-button').innerHTML = ''
-  },
-  sortByButtons(){
-  let container = document.querySelector('.button-container')
-  container.innerHTML = sortButtons()
   }
 }
 
@@ -68,12 +63,4 @@ let foodCategories = function(category){
       break;
   }
   return number
-}
-
-function sortButtons(){
-  return `<br> <div class="row sort-bar">
-    <div class="col-3">Oldest</div>
-    <div class="col-3">Newest</div>
-    <div class="col-3">Perishable</div>
-    <div class="col-3">Categories</div>`
 }

@@ -74,7 +74,7 @@ const req = {
   forkReq(data){
     axios.get(`${heroku}/ideas/${data}`)
       .then(res => {
-        ideas.showRecipes(res.data)
+        res.data ? ideas.showRecipes(res.data) : ideas.getFoods()
     })
   }
 }

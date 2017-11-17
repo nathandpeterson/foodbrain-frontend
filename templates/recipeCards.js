@@ -1,6 +1,6 @@
 
 function showRecipe(data){
-  return `<div class="card recipe-card">
+  let card = `<div class="card recipe-card">
       <div class="card-body">
         <h4 class="card-name">${data.name}</h4>
         <h4 class="card-prep">${data.prep_time}</h4>
@@ -8,6 +8,7 @@ function showRecipe(data){
         <a id="${data.id}" href="#" class="btn btn-light recipe-data">See All Ingredients</a>
       </div>
     </div>`
+    return card
 }
 
 function showOneRecipe([recipeData, allIngredientNames, allIngredients]){

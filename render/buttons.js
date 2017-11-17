@@ -42,7 +42,8 @@ let activateButtons = {
     let ideas = document.querySelector('.recipe-ideas-btn')
     ideas.addEventListener('click', (e) => {
       e.preventDefault()
-      console.log(e.target)
+      document.querySelector('.update').style.display = 'none'
+      req.forkReq(e.target.id)
     })
   },
   create(){
@@ -112,6 +113,10 @@ let activateButtons = {
     destroy.addEventListener('click', (e) => {
       e.preventDefault()
       req.dropRecipe(e.target.id)
+    })
+    let recipeIdeas = document.querySelector('.recipe-ideas-btn')
+    recipeIdeas.addEventListener('click', (e) => {
+      ideas.getFoods()
     })
   }
 }

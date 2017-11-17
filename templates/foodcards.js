@@ -59,14 +59,13 @@ function foodImage(foodData){
   return image
 }
 
-function cardButtons(id){
+function cardButtons(data){
   return `
     <div class="card update">
       <div class="card-body">
-        <button id="${id}" href="#" class="btn btn-lg btn-secondary btn-block food-back-btn">Back to All Foods</button>
-        <button id="${id}" href="#" class="btn btn-lg btn-secondary btn-block food-delete-btn">Delete</button>
-        <button id="${id}" href="#" class="btn btn-lg btn-secondary btn-block recipe-ideas-btn">Ideas</button>
-
+        <button id="${data.id}" href="#" class="btn btn-lg btn-secondary btn-block food-back-btn">Back to All Foods</button>
+        <button id="${data.id}" href="#" class="btn btn-lg btn-secondary btn-block food-delete-btn">Delete</button>
+        <button id="${data.name}" href="#" class="btn btn-lg btn-secondary btn-block recipe-ideas-btn">Ideas</button>
       </div>
     </div>`
 }
