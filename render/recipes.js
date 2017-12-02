@@ -14,17 +14,20 @@ const showRecipes = {
     let cardContainer = document.querySelector('.food-cards')
     let card = showOneRecipe(recipe)
     cardContainer.innerHTML = card
-    cardContainer.innerHTML += cardButtons(recipe[0].id)
+    cardContainer.innerHTML += cardButtons(recipe.id)
     activateButtons.recipeUpdateActions()
+    req.searchAvailableFood(recipe.ingredients)
   },
   clear(){
     document.querySelector('.food-cards').innerHTML = ''
     document.querySelector('.button-container').innerHTML = ''
     document.querySelector('.create-button').innerHTML = ''
   },
-  highlightIngredients(id){
-    let ing = document.querySelector(`#ingredient${id}`)
-    ing.style.color = 'yellow'
+  highlightIngredients(matches){
+    matches.forEach(match => {
+      let ingredient = document.querySelector(`#ingredient${match[0].id}`)
+      ingredient.style.color = 'yellow'
+    })
   },
   buildAddRecipeBtn() {
     document.querySelector('.create-button').innerHTML +=

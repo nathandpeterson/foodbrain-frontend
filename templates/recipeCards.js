@@ -11,25 +11,18 @@ function showRecipe(data){
     return card
 }
 
-function showOneRecipe([recipeData, allIngredientNames, allIngredients]){
-  allIngredients = allIngredients.filter(ing => ing.recipe_id == recipeData.id)
-  let ingList = allIngredients.map(ing => {
-    let ingName = allIngredientNames.find(ingName => ingName.id == ing.ingredient_id)
-    ing.name = ingName.name
-  })
+function showOneRecipe(recipe){
   let card = `<div class="card recipe-card">
       <div class="card-body">
-        <h4 class="card-name">${recipeData.name}</h4>
-        <h4 class="card-prep">${recipeData.prep_time}</h4>
-        <p class="instructions">${recipeData.instructions}<p>
+        <h4 class="card-name">${recipe.name}</h4>
+        <h4 class="card-prep">${recipe.prep_time}</h4>
+        <p class="instructions">${recipe.instructions}<p>
         <ul class="ingredient-list"> Ingredients`
-  allIngredients.forEach(ingredient => {
+  recipe.ingredients.forEach(ingredient => {
     card += `<li id="ingredient${ingredient.ingredient_id}">${ingredient.quantity} ${ingredient.name}</li>`
-    req.searchFood(ingredient.ingredient_id)
     })
     card += `</ul>`
-    if(recipeData.notes) card += `<p class="notes">${recipe.notes}</p>`
+    if(recipe.notes) card += `<p class="notes">${recipe.notes}</p>`
     card += `</div></div>`
-    req.searchFood()
     return card
 }
