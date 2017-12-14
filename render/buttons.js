@@ -26,19 +26,7 @@ let activateButtons = {
       showFoods.clear()
       req.getAllFoods()
     })
-    // let update = document.querySelector('.food-update-btn')
-    // update.addEventListener('click', (e) => {
-    //     e.preventDefault()
-    //     let data
-    //     // console.log('update', e.target.id)
-    //     showFoods.clear()
-    //     //this doesn't work
-    //     // req.getOneFood(e.target.id)
-    //       .then(res => {
-    //         console.log(res.data)
-    //         // document.querySelector('.create-button').innerHTML = form()
-    //       })
-    // })
+    // Delete dead code before you commit!
     let ideas = document.querySelector('.recipe-ideas-btn')
     ideas.addEventListener('click', (e) => {
       e.preventDefault()
@@ -63,10 +51,11 @@ let activateButtons = {
   },
   createActions(){
     let back = document.querySelector('#go-back')
+    // Watch your indentation!
     back.addEventListener('click', (e) => {
-    e.preventDefault()
-    showFoods.clear()
-    req.getAllFoods()
+      e.preventDefault()
+      showFoods.clear()
+      req.getAllFoods()
     })
     let submit = document.querySelector('.submit-food')
     submit.addEventListener('click', (e) => {
@@ -93,21 +82,21 @@ let activateButtons = {
       document.querySelector('#recipes-home').addEventListener('click',(e) =>{
         e.preventDefault()
         mainButtons.build()
-        })
+      })
       let submitButton = document.querySelector('#submit-new-recipe')
       submitButton.addEventListener('click',(e)=> {
           e.preventDefault()
           let recipe = collectRecipeData()
           req.addRecipe(recipe)
-      } )
       })
+    })
   },
   recipeUpdateActions(){
     let back = document.querySelector('.food-back-btn')
     back.addEventListener('click', (e) => {
-    e.preventDefault()
-    showFoods.clear()
-    req.getAllRecipes()
+      e.preventDefault()
+      showFoods.clear()
+      req.getAllRecipes()
     })
     let destroy = document.querySelector('.food-delete-btn')
     destroy.addEventListener('click', (e) => {
