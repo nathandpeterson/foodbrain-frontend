@@ -15,8 +15,8 @@ function showFood(data){
 
 function showOneFood(data){
   let image = foodImage(data)
-  let perish = ''
-  data.perishable ? perish = 'Perishable' : null
+  let perish = data.perishable ? 'Perishable' : ''
+
   return `
     <div class="card each">
       <h4 class="card-name">${data.name}</h4>
@@ -28,6 +28,9 @@ function showOneFood(data){
     </div>`
 }
 
+// Downloading the files locally would actually save us from having
+// to write this code. Instead, each image could have the name of
+// the food category.
 function foodImage(foodData){
   let image = ''
   switch(foodData.category){
