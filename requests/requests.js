@@ -3,12 +3,11 @@ const heroku = 'https://vast-depths-23958.herokuapp.com'
 
 const req = {
   getAllFoods(show=true){
-    if(show == true){
-      axios.get(`${heroku}/foods`)
-        .then(res => showFoods.all(res.data))
+    const getRequest = axios.get(`${heroku}/foods`)
+    if(show){
+      getRequest.then(res => showFoods.all(res.data))
     } else {
-      axios.get(`${heroku}/foods`)
-        .then(res => ideas.randomFood(res.data))
+      getRequest.then(res => ideas.randomFood(res.data))
     }
   },
   getOneFood(id){
