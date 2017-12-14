@@ -15,6 +15,10 @@ const ideas = {
     container.innerHTML = ideaCard(food)
   },
   showRecipes(recipes){
+    // If you're not returning anything, you shouldn't need a ternary.
+    // However, am I understanding this right that you're performing
+    // an asynchronous request conditionally but not waiting for
+    // it to be done before moving on to more code?
     !recipes ? this.getFoods() : null
     let container = document.querySelector('.card-deck')
     let threeRecipes = recipes.filter((rec, idx) => idx < 3)
